@@ -20,11 +20,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 // Routing
-app.get('/', (req, res)=>{
-    res.json({
-        message: "hello"
-    })
-})
+// app.get('/', (req, res)=>{
+//     res.json({
+//         message: "hello"
+//     })
+// })
 const userRoute = require('./routes/userRoute');
 const musicRoute = require('./routes/musicRoute');
 const postRoute = require('./routes/postRoute');
