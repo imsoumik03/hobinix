@@ -8,6 +8,7 @@ import Button from '../../components/utils/Button';
 import validator from 'validator';
 import { useDispatch, useSelector } from 'react-redux';
 import { RegisterUser } from '../../actions/userActions';
+import { toast } from 'react-toastify';
 
 const SignUp = () => {
     const dispatch = useDispatch();
@@ -43,30 +44,30 @@ const SignUp = () => {
             data;
 
         if (!(/^[A-Za-z\s]*$/.test(name) && name.length > 0)) {
-            console.log('enter valid name');
+            toast.error('enter valid name');
             return;
         }
         if (!validator.isEmail(email) || email.length === 0) {
-            console.log('enter valid email');
+            toast.error('enter valid email');
             return;
         }
         if (!validator.isAlphanumeric(username) || username.length === 0) {
-            console.log('enter valid username');
+            toast.error('enter valid username');
             return;
         }
         if (!/^[0-9]{10}$/.test(phone)) {
-            console.log('enter valid phone number');
+            toast.error('enter valid phone number');
             return;
         }
         if (password !== confirm_password) {
             //############################ passowrd validation ######################
-            console.log('password ');
+            toast.error('password ');
             return;
         }
-        if (!photo) {
-            console.log('photo');
-            return;
-        }
+        // if (!photo) {
+        //     console.log('photo');
+        //     return;
+        // }
 
         dispatch(
             RegisterUser({
@@ -163,7 +164,7 @@ const SignUp = () => {
                             />
                         </li>
                     </ul>
-                    <div
+                    {/* <div
                         class={`flex justify-center items-center gap-4 ${
                             !url && 'flex-col'
                         }`}
@@ -184,7 +185,7 @@ const SignUp = () => {
                             class="text-sm text-slate-500 bg-[#0006] rounded-full file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-violet-700 hover:file:bg-violet-100"
                             onChange={handlePhoto}
                         />
-                    </div>
+                    </div> */}
                     <div onClick={handleSubmit}>
                         <Button value="Signup" style="py-2" />
                     </div>

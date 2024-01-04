@@ -37,7 +37,7 @@ export const RegisterUser = createAsyncThunk(
             console.log(formData);
             const res = await axios.post('/api/signup', formData, {
                 headers: {
-                    'Content-Type': 'multipart/form-data',
+                    'Content-Type': 'application/json',
                 },
             });
             window.location.href = '/music'

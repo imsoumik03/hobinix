@@ -57,7 +57,7 @@ function App() {
                 />
                 <Route
                     path="/"
-                    element={<Navigate to="/loin" />}
+                    element={<Navigate to="/login" />}
                 />
                 <Route
                     path="/music"

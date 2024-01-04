@@ -42,7 +42,7 @@ export default function Appbar({ login, signup }) {
     return (
         <>
             <div
-                className={`flex justify-between items-center bg-neutral-950 w-screen h-[10vh] px-5 ${
+                className={`flex justify-between items-center bg-[rgba(0,0,0,0.4)] w-screen h-[10vh] px-5 ${
                     !(login || signup) && 'border-b-2 border-neutral-600'
                 }`}
             >
