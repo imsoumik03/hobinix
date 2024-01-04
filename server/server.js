@@ -21,7 +21,9 @@ app.use(cookieParser());
 
 // Routing
 app.get('/', (req, res)=>{
-    res.send("hello")
+    res.json({
+        message: "hello"
+    })
 })
 const userRoute = require('./routes/userRoute');
 const musicRoute = require('./routes/musicRoute');
