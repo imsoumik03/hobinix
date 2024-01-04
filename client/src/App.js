@@ -57,11 +57,7 @@ function App() {
                 />
                 <Route
                     path="/"
-                    element={
-                        <PrivateRoute>
-                            <Navigate to="/music" />
-                        </PrivateRoute>
-                    }
+                    element={<Navigate to="/loin" />}
                 />
                 <Route
                     path="/music"

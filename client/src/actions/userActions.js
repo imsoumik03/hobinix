@@ -20,7 +20,7 @@ export const loginUser = createAsyncThunk(
                     'Content-Type': 'application/json',
                 },
             });
-            window.location.href = '/'
+            window.location.href = '/music'
             toast.success(res.data.data.messege)
             return res.data;
         } catch (e) {
@@ -40,7 +40,7 @@ export const RegisterUser = createAsyncThunk(
                     'Content-Type': 'multipart/form-data',
                 },
             });
-            window.location.href = '/'
+            window.location.href = '/music'
             toast.success(res.data.data.messege)
             return res.data;
         } catch (e) {
