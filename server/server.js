@@ -10,7 +10,8 @@ const port = process.env.PORT;
 database();
 app.use(
     cors({
-        'Access-Control-Allow-Origin': '*',
+        origin: "https://hobinix-client.vercel.app/signup",
+        // 'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Headers': '*',
     })
 );
