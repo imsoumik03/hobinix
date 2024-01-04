@@ -10,7 +10,7 @@ const port = process.env.PORT;
 database();
 app.use(
     cors({
-        origin: "https://hobinix-client.vercel.app/signup",
+        origin: "https://hobinix-client.vercel.app",
         // 'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Headers': '*',
     })
@@ -20,6 +20,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 // Routing
+app.get('/', (req, res)=>{
+    res.send("hello")
+})
 const userRoute = require('./routes/userRoute');
 const musicRoute = require('./routes/musicRoute');
 const postRoute = require('./routes/postRoute');
